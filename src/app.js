@@ -1,31 +1,12 @@
 import React from "react";
 import { marked } from 'marked'
 
-let markdown = `
-# heading1
-
-## heading2
-https://www.google.com
-\`\`\`
-var x = 0;
-var y = 1;
-var z = x + y;
-\`\`\`
-\`Math.round(3.2)\`
-- list item 1
-- list item 2
-
->Here's a Block Quote!
-**BOLD text in mundane times**
-![rando logo](https://pic.onlinewebfonts.com/svg/img_211187.png)
-`;
-
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: markdown
-        };
+            value: `# heading1\n## heading2\nhttps://www.google.com\n\`\`\`\nvar x = 0;\nvar y = 1;\nvar z = x + y;\n\`\`\`\n\`Math.round(3.2)\`\n- list item 1\n- list item 2\n\n>Here's a Block Quote!<br>**BOLD text in mundane times**<br>![rando logo](https://pic.onlinewebfonts.com/svg/img_211187.png)`
+            };
         this.handleChange = this.handleChange.bind(this);
     }
 
